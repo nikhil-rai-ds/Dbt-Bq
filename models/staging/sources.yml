@@ -1,0 +1,12 @@
+sources:
+  - name: bq
+    description: This is bigquery raw data
+    database: terraform-runner-487209
+    schema: zoomcamp
+    tables: 
+      - name : green_tripdata
+        description: contains greentrip data 2019 onwards
+      - name : yellow_tripdata 
+        description : contains yellowtrip data 2019 onwards 
+
+
