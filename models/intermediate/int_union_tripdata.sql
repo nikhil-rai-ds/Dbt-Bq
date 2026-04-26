@@ -6,7 +6,8 @@ yellow as (
 )
 
 select *
-from green
-union all
-select *
-from yellow;
+from green 
+union  all
+select * 
+from yellow
+ 
