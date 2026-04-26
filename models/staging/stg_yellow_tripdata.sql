@@ -1,7 +1,7 @@
 with source as (
     select * from {{ source('bq', 'yellow_tripdata') }}
-    where cast(lpep_pickup_datetime as timestamp) >= '2019-01-01'
-    and cast(lpep_pickup_datetime as timestamp) < '2019-02-01'
+    where cast(tpep_pickup_datetime as timestamp) >= '2019-01-01'
+    and cast(tpep_pickup_datetime as timestamp) < '2019-02-01'
 ),
 
 renamed as (
