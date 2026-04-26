@@ -1,8 +1,8 @@
 with green as (
-    select * from zoomcamp.stg_green_tripdata
+    select * from {{ref('stg_green_tripdata')}}
 ),
 yellow as (
-    select * from zoomcamp.stg_yellow_tripdata
+    select * from {{ref('stg_yellow_tripdata')}}
 )
 
 select *
