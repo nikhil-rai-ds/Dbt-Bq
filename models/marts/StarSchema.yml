@@ -1,0 +1,20 @@
+models:
+  - name: dim_location
+    description: "Table contains information about pick up and drop locations"
+    columns : 
+      - name : location_id  
+        description: "Unique id of each location"
+        tests : 
+            - unique 
+            - not_null
+
+  - name : dim_vendor 
+    description: "Table contains information about the vendors"
+    columns : 
+        - name : vendor_id 
+          description: "Unique id of each vendor"
+          tests : 
+            - unique 
+            - not_null
+            
+            

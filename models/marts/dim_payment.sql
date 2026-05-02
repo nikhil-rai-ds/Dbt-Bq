@@ -3,5 +3,5 @@ with payment as (
     from {{ref('int_union_tripdata')}} 
 ) 
 select * 
-,{{get_payment_name('payment_type')}}
+,{{get_payment_name('payment_type')}} as payment_name
 from payment
