@@ -38,3 +38,52 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+
+seeds: 
+  my_new_project : 
+    reporting_data_feature : 
+      +column_types:
+        trip_id: string
+        vendor_id: int64
+        rate_code_id: int64
+        pickup_location_id: int64
+        dropoff_location_id: int64
+        pickup_datetime: timestamp
+        dropoff_datetime: timestamp
+        passenger_count: int64
+        trip_type: int64
+        payment_type: int64
+        taxi_type: string
+        fare_amount: float64
+        extra: float64
+        mta_tax: float64
+        tip_amount: float64
+        tolls_amount: float64
+        improvement_surcharge: float64
+        total_amount: float64
+        ehail_fee: float64
+        payment_name: string
+
+    reporting_data_feature_expected : 
+      +column_types:
+        customer_type : string
+        trip_id: string
+        vendor_id: int64
+        rate_code_id: int64
+        pickup_location_id: int64
+        dropoff_location_id: int64
+        pickup_datetime: timestamp
+        dropoff_datetime: timestamp
+        passenger_count: int64
+        trip_type: int64
+        payment_type: int64
+        taxi_type: string
+        fare_amount: float64
+        extra: float64
+        mta_tax: float64
+        tip_amount: float64
+        tolls_amount: float64
+        improvement_surcharge: float64
+        total_amount: float64
+        ehail_fee: float64
+        payment_name: string

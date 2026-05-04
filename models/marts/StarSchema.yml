@@ -1,20 +1,34 @@
 models:
   - name: dim_location
     description: "Table contains information about pick up and drop locations"
-    columns : 
-      - name : location_id  
+    columns:
+      - name: location_id
         description: "Unique id of each location"
-        tests : 
-            - unique 
-            - not_null
+        tests:
+          - unique
+          - not_null
 
-  - name : dim_vendor 
+  - name: dim_vendor
     description: "Table contains information about the vendors"
-    columns : 
-        - name : vendor_id 
-          description: "Unique id of each vendor"
-          tests : 
-            - unique 
-            - not_null
-            
-            
+    columns:
+      - name: vendor_id
+        description: "Unique id of each vendor"
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_tripdata
+    columns:
+      - name: passenger_count
+        description: count_of_passenger
+        tests:
+          - is_even
+          - is_not_zero
+
+  - name: reporting_feature
+    description: "This checks if the passenger was generous or not"
+    tests:
+      - dbt_utils.equality:
+          arguments:
+            compare_model: ref('reporting_data_feature_expected') 
+             

@@ -1,0 +1,4 @@
+tests:
+  - name: pickup_drop_of_time.sql 
+    description: > 
+      The pick up time should always be less than drop off time 
